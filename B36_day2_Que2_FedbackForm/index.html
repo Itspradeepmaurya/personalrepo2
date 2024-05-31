@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Feedback Form</title>
+  </head>
+  <body>
+    <form action="#">
+      <label for="feedbacktype"> Feedback Type:</label>
+      <select name="feedbackType" id="feedbackType">
+        <option value="">--select feedback type--</option>
+        <option value="product">Existing Product Feedback</option>
+        <option value="newProduct">Suggetion for New Product to Include</option>
+        <option value="general">General Feedback</option>
+        <option value="other">Other</option></select
+      ><br /><br />
+      <label for="message">Message:</label><br />
+      <textarea name="message" id="message" required></textarea><br /><br />
+      <label for="websiteRating">Product Rating:</label><br />
+      <input
+        type="radio"
+        id="excellent"
+        name="websiteRating"
+        value="Excellent"
+      />
+      <label for="excellent">Excellent</label>
+      <input type="radio" id="good" name="websiteRating" value="Good" />
+      <label for="good">Good</label>
+      <input type="radio" id="average" name="websiteRating" value="Average" />
+      <label for="average">Average</label>
+      <input type="radio" id="bad" name="websiteRating" value="bad" />
+      <label for="bad">Bad</label>
+      <input type="radio" id="poor" name="websiteRating" value="poor" />
+      <label for="poor">Very Poor</label><br /><br />
+      <label for="age">Age:</label><br />
+      <input
+        type="number"
+        name="age"
+        id="age"
+        min="10"
+        max="100"
+        required
+      /><br /><br />
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required /><br /><br />
+      <label for="password">Password:</label
+      ><input
+        type="password"
+        id="password"
+        name="password"
+        minlength="8"
+        maxlength="20"
+        required
+      /><br /><br />
+      <label for="websiteUrl">Website URL (optional):</label>
+      <input type="url" id="websiteUrl" name="websiteUrl" /><br /><br />
+      <input type="checkbox" id="terms" name="terms" />
+      <label for="terms">I agree to the terms and conditions</label><br /><br />
+
+      <input type="submit" value="Submit" />
+      <input type="reset" value="Reset">
+    </form>
+  </body>
+</html>
