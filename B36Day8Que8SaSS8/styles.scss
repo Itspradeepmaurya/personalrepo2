@@ -1,0 +1,25 @@
+    $primary-color : #007bff;
+    $secondary-color : #6c757d;
+    $tertiary-color :#28a745;
+
+$theme-colors : (
+    primary : $primary-color ,
+    secondary : $secondary-color,
+    tertiary :$tertiary-color
+);
+@mixin apply-background-color ($color-key) {
+    background-color: map-get($theme-colors,  $color-key );
+}
+
+
+.margin {
+    @include apply-background-color(primary);
+}
+
+
+@for $i from 1 through 5 {
+  .margin-#{$i} {
+    margin:  10px * $i;
+    border: 2px solid purple;
+  }
+}

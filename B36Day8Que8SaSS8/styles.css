@@ -1,0 +1,28 @@
+.margin {
+  background-color: #007bff;
+}
+
+.margin-1 {
+  margin: 10px;
+  border: 2px solid purple;
+}
+
+.margin-2 {
+  margin: 20px;
+  border: 2px solid purple;
+}
+
+.margin-3 {
+  margin: 30px;
+  border: 2px solid purple;
+}
+
+.margin-4 {
+  margin: 40px;
+  border: 2px solid purple;
+}
+
+.margin-5 {
+  margin: 50px;
+  border: 2px solid purple;
+}/*# sourceMappingURL=styles.css.map */

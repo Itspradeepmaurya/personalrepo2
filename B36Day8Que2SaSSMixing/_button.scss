@@ -1,0 +1,16 @@
+@mixin button-style ($a1, $b1,$f1 , $c1, $d1, $e1 ) {
+    border:1 px solid $a1;
+    padding: $b1 $f1;
+    background-color: $c1;
+    color: $d1;
+    text-decoration: $e1;
+}
+
+.primary_button1 {
+    @include button-style(1px solid #ccc,10px ,20px , #f0f0f0,#333 ,none );
+}
+.primary_button2 {
+    @include button-style (1px solid #ccc,10px ,20px , #007bff,#fff ,none );
+    
+}
+

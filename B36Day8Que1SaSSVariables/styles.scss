@@ -1,0 +1,16 @@
+$custom-color: rgb(42, 195, 78);
+h1 {
+    color : $custom-color;
+}
+.circle {
+      border: 2px solid $custom-color;
+      background-color: rgb(99, 212, 210);
+      border-radius: 10px;
+      width: 100px;
+      height: 100px;
+}
+.square {
+    width: 100px;
+    height: 100px;
+    background-color: $custom-color;
+}

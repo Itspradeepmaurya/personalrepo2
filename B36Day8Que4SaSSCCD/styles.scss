@@ -1,0 +1,161 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+$font-color1 :rgb(178,178,178);
+$font-color2 : rgb(227,108,112);
+
+%span-styles {
+    display: grid; gap: 5px;
+    place-items: center; 
+}
+@mixin button-style($a1 , $b1 , $c1 , $d1){
+    border: $a1 solid;
+    border-radius: $b1;
+    padding: $c1 $d1;
+}
+body {
+    max-width: 1350px;
+    margin: auto;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    header {
+        display: grid;
+        grid-template-columns: auto 1fr auto;
+        div {
+            padding-inline:  20px;
+            color : $font-color2;
+           span {
+            
+            font-size: 17px;
+           }
+           
+            
+        }
+        div:nth-child(2) {
+          @extend %span-styles;
+           grid-template-columns: 10% 10% 10% 20% 25%;
+           
+         }
+         div:nth-child(3) {
+            @extend %span-styles;
+            grid-template-columns:repeat(3,1fr);
+        
+         }
+        :nth-child(2)>span:hover {
+           text-decoration: underline;
+        }
+        :nth-child(3)>span:hover {
+            color: black;
+        }
+    }
+   
+    section {
+        display: grid;
+        grid-template-columns: 55% 45% ;
+        
+        
+        div>img {
+          width: 100%;
+           ;
+        }
+        :nth-child(2) {
+            background-color: rgb(220,67,72);
+            display: grid;
+            place-items: center;
+            grid-template-rows: 20% 15% 1% 15% 1% 10%;
+            color: white;
+            
+      
+             h3 {
+                  margin-top: 100px;
+                  font-size: 30px;
+             }
+             p:nth-of-type(2) {
+                @include button-style(2px,25px ,5px ,30px);
+                background-color:rgb(238, 228, 228);
+                color:  rgb(220,67,72);
+             }
+             p:nth-of-type(2):hover {
+                background-color: white;
+             }
+             fieldset {
+                padding-inline: 200px;
+                border: 2px solid;
+                border-bottom: none;
+                border-left: none;
+                border-right : none;
+                color: white;
+                padding-bottom: 20px;
+             }
+             fieldset>legend {
+                padding-inline: 10px;
+             }
+             p:nth-of-type(4) {
+                @include button-style(2px,25px ,5px ,30px)
+             }
+        }
+    }
+    div.social {
+        display: grid;
+        padding: 45px;
+        grid-template-columns: repeat(5, 50px) ;
+
+        gap: 15px;
+        justify-content: center;
+        font-size: 30px;
+        border-bottom: 1px solid grey;
+        
+       
+
+        span {
+            border: 1px;
+            justify-items: center;
+            padding: 10px 10px 10px 10px ;
+            border-radius: 20px;
+        }
+        span:nth-of-type(1) {
+            background: linear-gradient(45deg, #833AB4, #C13584, #E1306C, #F56040, #F77737, #FCAF45, #FFDC80);
+            color: white;
+        }
+    
+        span:nth-of-type(2) {
+            color: white;
+            background: rgb(59,89,152);
+        }
+        span:nth-of-type(3) {
+            color: white;
+            background: rgb(205,32,31);
+        }
+        span:nth-of-type(4) , span:nth-of-type(5)  {
+            color: white;
+            background: rgb(85,172,238);
+        }
+    }
+    footer {
+        display: grid;
+        grid-template-rows:  300px 30px;
+        color: $font-color1;
+       
+        
+        div.upperfooter {
+            display: grid;
+            grid-template-columns: repeat(5, 20%);
+            border-bottom: 1px solid grey;
+            align-items: center;
+
+            li {
+                    font-weight: 500;
+                    list-style: none;
+                    padding: 10px;
+              
+            }
+            :nth-child(1) {
+                font-weight: bolder;
+            }
+        }
+    }
+}
+
+
+

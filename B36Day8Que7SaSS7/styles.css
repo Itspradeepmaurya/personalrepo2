@@ -1,0 +1,11 @@
+.normal-width {
+  width: 300px;
+  background-color: yellow;
+  height: 200px;
+}
+
+.double-width {
+  width: 600px;
+  background-color: green;
+  height: 200px;
+}/*# sourceMappingURL=styles.css.map */
